@@ -7,7 +7,6 @@
 
 // MessageViewModelTests.swift
 
-import Foundation
 import Factory
 import Testing
 @testable import FactoryForDI
@@ -15,23 +14,20 @@ import Testing
 struct MessageViewModelTests {
     
     @Test
-    func testLoadMessageWithMock() {
-        // Setup
+    func testLoadMessageWithMockService() {
         let container = Container()
         container.messageService.register { MockMessageService() }
         let viewModel = MessageViewModel(service: container.messageService())
-        // Act
         viewModel.loadMessage()
-        // Assert
         #expect(viewModel.message == "Hello from Test")
+    }
+
+    @Test
+    func testLoadMessageWithLiveService() {
+        let viewModel = MessageViewModel(service: LiveMessageService())
+        viewModel.loadMessage()
+        #expect(viewModel.message == "Hello from Factory!")
     }
 }
 
-struct LiveServiceTests {
-    @Test
-    func testLiveServiceReturnsFactoryMessage() {
-        let liveService = LiveMessageService()
-        let message = liveService.getMessage()
-        #expect(message == "Hello from Factory!")
-    }
-}
+

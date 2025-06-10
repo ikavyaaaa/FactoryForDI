@@ -11,7 +11,8 @@ import SwiftUI
 import Factory
 
 struct ContentView: View {
-    @StateObject private var viewModel: MessageViewModel
+    @StateObject var viewModel: MessageViewModel
+    @State private var showDetail = false
 
     init(container: Container = Container.shared) {
         let service = container.messageService()
@@ -19,14 +20,27 @@ struct ContentView: View {
     }
 
     var body: some View {
-        VStack(spacing: 20) {
-            Text(viewModel.message)
-                .font(.largeTitle)
-                .padding()
+        NavigationStack {
+            VStack(spacing: 20) {
+                Text(viewModel.message)
+                    .font(.title)
+                    .padding()
 
-            Button("Load Message") {
-                viewModel.loadMessage()
+                Button("Load Message") {
+                    viewModel.loadMessage()
+                }
+
+                Button("Go to Detail") {
+                    viewModel.loadMessage()
+                    showDetail = true
+                }
+            }
+            .navigationTitle("Home")
+            .padding()
+            .navigationDestination(isPresented: $showDetail) {
+                MessageDetailView(message: viewModel.message)
             }
         }
     }
 }
+

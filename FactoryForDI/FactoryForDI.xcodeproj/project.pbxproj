@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		845A37A12DF74177006DB688 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A37A02DF74177006DB688 /* MessageService.swift */; };
-		845A37A32DF741BB006DB688 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A37A22DF741BA006DB688 /* DIContainer.swift */; };
 		845A37A62DF741D5006DB688 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 845A37A52DF741D5006DB688 /* Factory */; };
-		845A37A82DF741EF006DB688 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A37A72DF741EF006DB688 /* MessageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +31,6 @@
 		845A37732DF740F0006DB688 /* FactoryForDI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FactoryForDI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845A37822DF740F2006DB688 /* FactoryForDITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryForDITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		845A378C2DF740F2006DB688 /* FactoryForDIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryForDIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		845A37A02DF74177006DB688 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
-		845A37A22DF741BA006DB688 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
-		845A37A72DF741EF006DB688 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -86,9 +80,6 @@
 		845A376A2DF740F0006DB688 = {
 			isa = PBXGroup;
 			children = (
-				845A37A72DF741EF006DB688 /* MessageViewModel.swift */,
-				845A37A22DF741BA006DB688 /* DIContainer.swift */,
-				845A37A02DF74177006DB688 /* MessageService.swift */,
 				845A37752DF740F0006DB688 /* FactoryForDI */,
 				845A37852DF740F2006DB688 /* FactoryForDITests */,
 				845A378F2DF740F2006DB688 /* FactoryForDIUITests */,
@@ -262,9 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845A37A32DF741BB006DB688 /* DIContainer.swift in Sources */,
-				845A37A12DF74177006DB688 /* MessageService.swift in Sources */,
-				845A37A82DF741EF006DB688 /* MessageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
